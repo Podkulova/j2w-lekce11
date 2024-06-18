@@ -1,0 +1,52 @@
+### Dávkově přidat knihy
+POST {{baseURL}}/batch
+Content-Type: application/json
+
+[
+  {
+    "nazev": "Devatero pohádek",
+    "autor": "Karel Čapek, Josef Čapek",
+    "rokVydani": 1946
+  },
+  {
+    "nazev": "Devatero pohádek",
+    "autor": "Karel Čapek, Josef Čapek",
+    "rokVydani": 2008,
+    "isbn": "9788000021799"
+  },
+  {
+    "nazev": "Válka s mloky",
+    "autor": "Karel Čapek",
+    "rokVydani": 2013,
+    "isbn": "9788073900182",
+    "stornovano": true
+  },
+  {
+    "nazev": "Muži pod ochranou",
+    "autor": "Robert Merle",
+    "rokVydani": 2017,
+    "isbn": "9788020616760"
+  },
+  {
+    "nazev": "Malevil",
+    "autor": "Robert Merle",
+    "rokVydani": 1983
+  }
+]
+
+### Přidat knihu
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+  "nazev": "Až delfín promluví",
+  "autor": "Robert Merle",
+  "rokVydani": 1974
+}
+
+### Získat seznam knih
+GET {{baseURL}}
+
+### Získat seznam knih, včetně stornovaných
+GET {{baseURL}}/?vcetneStornovanych=true
+
