@@ -50,3 +50,24 @@ GET {{baseURL}}
 ### Získat seznam knih, včetně stornovaných
 GET {{baseURL}}/?vcetneStornovanych=true
 
+### Kopie požadavku prohlížeče
+GET http://localhost:8080/api/?vcetneStornovanych=false
+
+### Aktualizovat záznamu
+PUT {{baseURL}}/6
+Content-Type: application/json
+
+{
+  "nazev": "Až delfín promluví",
+  "autor": "Robert Merle",
+  "rokVydani": 1967
+}
+
+### Mazání
+DELETE {{baseURL}}/6
+
+### Obnovit knihu
+POST {{baseURL}}/6/obnovit
+
+###
+GET {{baseURL}}/1
